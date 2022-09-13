@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+    },
     fontWeight: {
       100: 100,
       100: 100,
@@ -15,12 +18,18 @@ module.exports = {
       900: 900,
     },
     extend: {
+      gap: {
+        inherent: "inherent",
+      },
       width: {
-        "flued-1": "min(100% - 2rem, 1550px)",
+        "flued-1": "min(100% - 1rem,100% - 4vw, 1550px)",
       },
       colors: {
+        //& surface
         "surface-100": "hsl(var(--clr-surface-100) / <alpha-value>)",
         "surface-900": "hsl(var(--clr-surface-900) / <alpha-value>)",
+        //& brand
+        "brand-300": "hsl(var(--clr-brand-300) / <alpha-value>)",
       },
       backgroundImage: {
         "gradient-text": "var(--gradient-text)",
