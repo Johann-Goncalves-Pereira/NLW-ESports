@@ -23,7 +23,16 @@ module.exports = {
         "surface-900": "hsl(var(--clr-surface-900) / <alpha-value>)",
       },
       backgroundImage: {
-        "gradient-100": "var(--clr-gradient-100)",
+        "gradient-text": "var(--gradient-text)",
+        "gradient-shadow": "var(--gradient-shadow)",
+      },
+      aspectRatio: {
+        box: 1,
+        card: "3/5",
+        landscape: "4/3",
+        portrait: "3/4",
+        ultrawide: "18/5",
+        golden: "1.618/1",
       },
     },
   },
