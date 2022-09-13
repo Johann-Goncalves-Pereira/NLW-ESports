@@ -4,6 +4,10 @@
 <details>
   <summary>Português</summary>
 
+  ---
+  
+  Base do [Figma](https://www.figma.com/community/file/1150897317533332617).
+  
   Você ja quis achar alguém para jogar o mesmo jogo que você? ou alguém do mesmo nível? 
   O __eSports__ permite com que um jogador ache seu _duo_(parceiros).
 
@@ -38,7 +42,10 @@
 
 <details>
   <summary>English</summary>
-
+  
+  ---
+  
+  [Figma](https://www.figma.com/community/file/1150897317533332617) Base.
 
   Have you ever wanted to find someone to play the same game as you? Or someone on the same level?
   __eSports__ allows a player to find their _duo_(partners).
