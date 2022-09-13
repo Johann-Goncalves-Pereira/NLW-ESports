@@ -1,0 +1,46 @@
+@use "/Abstracts" as *;
+@use "sass:string" as str;
+
+@function hsl($h, $s, $l) {
+	@if $env == "color" {
+		@return unquote("hsl(#{$h} #{$s} #{$l})");
+	} //
+	@else {
+		@return unquote("#{$h} #{$s} #{$l}");
+	}
+}
+
+$colors: (
+	surface: (
+		100: hsl(240, 5%, 7%),
+		900: hsl(240, 5%, 97%),
+	),
+	brand: (
+		300: hsl(257, 16%, 18%),
+	),
+	gradient: (
+		text: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%),
+		shadow: linear-gradient(0deg, #000000eb 0%, #0000 70%),
+	),
+);
+
+@mixin create-custom-prop($list) {
+	@each $type, $value in $list {
+		@each $shade, $color in $value {
+			$gradientStr: "linear-gradient(";
+			$isGradient: str-slice($color, 0, str-length($gradientStr)) == $gradientStr;
+
+			@if $isGradient {
+				--#{$type}-#{$shade}: #{$color};
+			}
+			//
+			@else {
+				#{$color-var}-#{$type}-#{$shade}: #{$color};
+			}
+		}
+	}
+}
+
+:root {
+	@include create-custom-prop($colors);
+}
