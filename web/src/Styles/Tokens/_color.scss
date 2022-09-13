@@ -1,0 +1,32 @@
+@use "/Abstracts" as *;
+
+@function hsl($h, $s, $l) {
+	@if $env == "color" {
+		@return unquote("hsl(#{$h} #{$s} #{$l})");
+	} //
+	@else {
+		@return unquote("#{$h} #{$s} #{$l}");
+	}
+}
+
+$colors: (
+	surface: (
+		100: hsl(240, 5%, 7%),
+		900: hsl(240, 5%, 97%),
+	),
+	gradient: (
+		100: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%),
+	),
+);
+
+@mixin create-custom-prop($list) {
+	@each $type, $value in $list {
+		@each $shade, $color in $value {
+			#{$color-var}-#{$type}-#{$shade}: #{$color};
+		}
+	}
+}
+
+:root {
+	@include create-custom-prop($colors);
+}
