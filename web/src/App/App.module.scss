@@ -1,0 +1,35 @@
+@use "/Abstracts" as *;
+
+.cards {
+	display: grid;
+	grid-auto-flow: column;
+	gap: var(--fsf-03);
+	grid-template-columns: repeat(auto-fill, minmax(fit-content, 1fr));
+}
+
+.card {
+	isolation: isolate;
+
+	a {
+		display: grid;
+		border-radius: 0.25rem;
+	}
+
+	img,
+	p {
+		grid-column: 1/1;
+		grid-row: 1/1;
+		border-radius: inherit;
+	}
+
+	p {
+		display: grid;
+		align-items: end;
+		grid-template-rows: 1fr auto;
+
+		padding-bottom: 1rem;
+		padding-inline: 1rem;
+
+		background-image: var(--gradient-shadow);
+	}
+}
