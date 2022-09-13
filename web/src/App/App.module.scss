@@ -33,3 +33,43 @@
 		background-image: var(--gradient-shadow);
 	}
 }
+
+.footer {
+	$c: 0.25rem;
+
+	position: relative;
+	isolation: isolate;
+
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: auto 1fr;
+	gap: 0.25rem;
+
+	padding-inline: 1rem;
+	padding-block: 1rem (1rem - $c);
+	border-radius: 0.5rem;
+
+	background-image: var(--gradient-text);
+
+	width: 100%;
+
+	align-items: center;
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		inset-block: $c -#{$c};
+		inset-inline: 0;
+
+		border-radius: inherit;
+		background-color: var(--clr-brand-300);
+
+		z-index: -1;
+	}
+
+	button {
+		grid-column: 2/2;
+		grid-row: 1 / span 2;
+	}
+}
