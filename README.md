@@ -1,5 +1,8 @@
 # NLW - eSports
 
+<img width="1735" alt="image" src="https://github.com/Johann-Goncalves-Pereira/NLW-eSports/assets/62612685/1da56b87-02a2-4556-96e7-d8a1e50f8f57">
+
+
 
 <details>
   <summary>Português</summary>
